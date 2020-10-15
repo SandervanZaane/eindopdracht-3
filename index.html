@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Eindopdracht</title>
+    <script defer type="text/javascript" src="movieDb.js"></script>
+    <script defer type="text/javascript" src="script.js"></script>
+    <!-- links -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <form>
+            <div class="item">
+                <input type="radio" id="newest" name="moviefilters" value="newest">
+                <label for="newest">Newest</label>
+            </div>
+            <div class="item">
+                <input type="radio" id="avengers" name="moviefilters" value="avengers">
+                <label for="avengers">Avengers</label>
+            </div>
+            <div class="item">
+                <input type="radio" id="xmen" name="moviefilters" value="xmen">
+                <label for="xmen">X-men</label>
+            </div>
+            <div class="item">
+                <img src="images/clipart2572350.png" width="30px" height="30px">
+            </div>
+            <div class="item">
+                <input type="radio" id="princess" name="moviefilters" value="princess">
+                <label for="princess">Princess</label>
+            </div>
+            <div class="item">
+                <input type="radio" id="other" name="moviefilters" value="other">
+                <label for="other">Batman</label>
+        </form>
+    </nav>
+    <main>
+        <div id="moviefilter" class="moviefilter">
+            <ul id="movielist">
+                <li></li>
+            </ul>
+        </div>
+    </main>
+</body>
+
+
+</html>
