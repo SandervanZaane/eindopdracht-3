@@ -3,7 +3,9 @@
 const ul = document.getElementById("movielist");
 
 
-function addMoviesToDom(movies) {
+function renderMoviesToDom(movies) {
+
+    clearMoviesFromDom();
 
     const moviesAsListElements = movies.map(obj => {
         const li = document.createElement("li");
@@ -16,9 +18,8 @@ function addMoviesToDom(movies) {
         img.src = obj.Poster;
         a.appendChild(img);
         ul.appendChild(li);
-        console.log(li);
         return li
-    })
+    });
 
     // for (i = 0; i < movies.length; i++) {
     //     const movie = movies[i];
@@ -26,8 +27,33 @@ function addMoviesToDom(movies) {
     // }
 };
 
-addMoviesToDom(movies);
+renderMoviesToDom(movies);
 
 /////// Fiters
+function filterByNewest(arr) {
+    return arr.filter(obj => obj.Year >= 2014);
+};
 
-// Number(movie.Year)
+/////// Clear Filters Function
+function clearMoviesFromDom() {
+    document.getElementById("movielist").innerHTML = "";
+};
+
+
+
+
+/////// 
+window.onload = function() {
+    console.log("window Loaded")
+    const radioNewest = document.getElementById("newest");
+    const radioAvengers = document.getElementById("avengers");
+    const radioXmen = document.getElementById("xmen");
+    const radioPrincess = document.getElementById("princess");
+    const radioOther = document.getElementById("other");
+
+    radioNewest.onclick = function() {
+        console.log("clicked radioNewest")
+
+        renderMoviesToDom(filterByNewest(movies));
+    }
+};
