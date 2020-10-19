@@ -1,34 +1,52 @@
-        html {
-            background-color: black;
-        }
-        
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        nav {
-            background-color: grey;
-            width: 100vw;
-            justify-content: center;
-        }
-        
-        .item {
-            width: 50px;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        main {
-            background-color: whitesmoke;
-            width: 100vw;
-            justify-content: center;
-        }
-        
-        form {
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-        }
+html {
+    background-color: black;
+    color: honeydew;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    width: 200px;
+    height: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: red;
+}
+
+main {
+    justify-content: center;
+}
+
+.moviefilter ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+;
